@@ -1,60 +1,229 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const headers = document.querySelectorAll(".header img");
-    headers.forEach(header => {
-        header.src = "logo_somar.png";
-        header.alt = "Logo Somar";
-    });
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        #contato {
+            padding: 30px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        h2 {
+            text-align: center;
+        }
+        .info {
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            margin: 0 auto;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .sector-title {
+            font-size: 1em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        .sector-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .whatsapp-icon {
+            vertical-align: middle;
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .map-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .map-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .instagram-button {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: white;
+            color: #E1306C;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            margin-top: 20px;
+            border: 2px solid #E1306C;
+        }
+        .instagram-button:hover {
+            color: #C13584;
+            background-color: #F9F9F9;
+        }
+        .header {
+            background-color: #000;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .header img {
+            max-width: 200px;
+            height: auto;
+            position: relative;
+        }
+        .address-button {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            margin: 20px auto;
+        }
+        .address-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-    const buttons = document.querySelectorAll(".button, .instagram-button, .address-button");
-    buttons.forEach(button => {
-        button.addEventListener("mouseenter", function() {
-            this.style.backgroundColor = "#45a049";
-        });
-        button.addEventListener("mouseleave", function() {
-            this.style.backgroundColor = "#4CAF50";
-        });
-    });
+    <!-- Cabeçalho com faixa preta e logo da Somar -->
+    <div class="header">
+        <img src="logo_somar.png" alt="Logo Somar">
+    </div>
 
-    const contactContainer = document.getElementById("contato");
-    contactContainer.querySelector("h1").textContent = "Contato";
-    contactContainer.querySelector("h2").textContent = "Encontre o Atendimento Ideal para Você";
+    <div class="container" id="contato">
+        <h1>Contato</h1>
+        <div class="info">
+            <h2>Encontre o Atendimento Ideal para Você</h2>
+            
+            <div class="grid">
+                <!-- Atendimento -->
+                <div class="sector-container">
+                    <p class="sector-title">Atendimento</p>
+                    <p><em>"Estamos aqui para ajudar com qualquer necessidade que você possa ter. Seja para orientações, pedidos ou outras questões, conte conosco!"</em></p>
+                    <a href="https://wa.me/556992522971" target="_blank" class="button">
+                        <img src="https://th.bing.com/th/id/R.3db05f40f9bfbfa4818e5f841359ac18?rik=i9uCGc2yoCWfNA&riu=http%3a%2f%2fspeedyclearance.uk%2fwp-content%2fuploads%2f2018%2f04%2fwhatsapp-icon.png&ehk=%2fGSNSk4y8vLd2qCiosXRI0WSYOth7SLdJewCXSxpcmY%3d&risl=&pid=ImgRaw&r=0" alt="WhatsApp Icon" class="whatsapp-icon">
+                        9 9252-2971
+                    </a>
+                </div>
+                
+                <!-- Artes -->
+                <div class="sector-container">
+                    <p class="sector-title">Artes</p>
+                    <p><em>"Tem algo em mente para o design dos seus rótulos e etiquetas? Nossa equipe de criação está pronta para colaborar e tornar suas ideias realidade."</em></p>
+                    <a href="https://wa.me/556992483104" target="_blank" class="button">
+                        <img src="https://th.bing.com/th/id/R.3db05f40f9bfbfa4818e5f841359ac18?rik=i9uCGc2yoCWfNA&riu=http%3a%2f%2fspeedyclearance.uk%2fwp-content%2fuploads%2f2018%2f04%2fwhatsapp-icon.png&ehk=%2fGSNSk4y8vLd2qCiosXRI0WSYOth7SLdJewCXSxpcmY%3d&risl=&pid=ImgRaw&r=0" alt="WhatsApp Icon" class="whatsapp-icon">
+                        9 9248-3104
+                    </a>
+                </div>
+                
+                <!-- Assistência Técnica -->
+                <div class="sector-container">
+                    <p class="sector-title">Assistência Técnica</p>
+                    <p><em>"Estamos à disposição para cuidar dos seus equipamentos. Conte com nossa assistência para que tudo funcione como deve."</em></p>
+                    <a href="https://wa.me/556992451608" target="_blank" class="button">
+                        <img src="https://th.bing.com/th/id/R.3db05f40f9bfbfa4818e5f841359ac18?rik=i9uCGc2yoCWfNA&riu=http%3a%2f%2fspeedyclearance.uk%2fwp-content%2fuploads%2f2018%2f04%2fwhatsapp-icon.png&ehk=%2fGSNSk4y8vLd2qCiosXRI0WSYOth7SLdJewCXSxpcmY%3d&risl=&pid=ImgRaw&r=0" alt="WhatsApp Icon" class="whatsapp-icon">
+                        9 9245-1608
+                    </a>
+                </div>
+                
+                <!-- Financeiro -->
+                <div class="sector-container">
+                    <p class="sector-title">Financeiro</p>
+                    <p><em>"Se precisar de apoio em qualquer questão financeira, estamos aqui para oferecer as informações e soluções que você precisa."</em></p>
+                    <a href="https://wa.me/556984217432" target="_blank" class="button">
+                        <img src="https://th.bing.com/th/id/R.3db05f40f9bfbfa4818e5f841359ac18?rik=i9uCGc2yoCWfNA&riu=http%3a%2f%2fspeedyclearance.uk%2fwp-content%2fuploads%2f2018%2f04%2fwhatsapp-icon.png&ehk=%2fGSNSk4y8vLd2qCiosXRI0WSYOth7SLdJewCXSxpcmY%3d&risl=&pid=ImgRaw&r=0" alt="WhatsApp Icon" class="whatsapp-icon">
+                        9 8421-7432
+                    </a>
+                </div>
+            </div>
+        </div>
 
-    const sectorContainers = document.querySelectorAll(".sector-container");
-    const sectors = [
-        { title: "Atendimento", message: "Estamos aqui para ajudar com qualquer necessidade que você possa ter. Seja para orientações, pedidos ou outras questões, conte conosco!", phone: "556992522971" },
-        { title: "Artes", message: "Tem algo em mente para o design dos seus rótulos e etiquetas? Nossa equipe de criação está pronta para colaborar e tornar suas ideias realidade.", phone: "556992483104" },
-        { title: "Assistência Técnica", message: "Estamos à disposição para cuidar dos seus equipamentos. Conte com nossa assistência para que tudo funcione como deve.", phone: "556992451608" },
-        { title: "Financeiro", message: "Se precisar de apoio em qualquer questão financeira, estamos aqui para oferecer as informações e soluções que você precisa.", phone: "556984217432" },
-    ];
+        <!-- Botão do Instagram -->
+        <div class="container" style="text-align: center;">
+            <a href="https://www.instagram.com/somar.etiquetas" target="_blank" class="instagram-button">
+                <img src="https://pngimg.com/uploads/instagram/instagram_PNG11.png" alt="Instagram Icon" style="vertical-align: middle; width: 20px; height: auto; margin-right: 10px;">
+                Siga-nos no Instagram!
+            </a>
+        </div>
 
-    sectorContainers.forEach((container, index) => {
-        const sector = sectors[index];
-        container.querySelector(".sector-title").textContent = sector.title;
-        container.querySelector("p em").textContent = sector.message;
-        container.querySelector("a").href = `https://wa.me/${sector.phone}`;
-    });
+        <!-- Endereço (Texto) -->
+        <div class="container" style="text-align: center; margin-top: 20px;">
+            <p>Avenida Maringá, 597, Nova Brasília, CEP: 76.908-402, Ji-Paraná/RO</p>
+        </div>
 
-    const instagramButton = document.querySelector(".instagram-button");
-    instagramButton.addEventListener("mouseenter", function() {
-        this.style.color = "#C13584";
-        this.style.backgroundColor = "#F9F9F9";
-    });
-    instagramButton.addEventListener("mouseleave", function() {
-        this.style.color = "#E1306C";
-        this.style.backgroundColor = "white";
-    });
+        <!-- Botão do Endereço -->
+        <div class="container" style="text-align: center;">
+            <a href="https://maps.app.goo.gl/xHz8WFWGGScTzi5s7" target="_blank" class="address-button">
+                Encontre-nos no Mapa
+            </a>
+        </div>
+    </div>
 
-    const addressButton = document.querySelector(".address-button");
-    addressButton.addEventListener("mouseenter", function() {
-        this.style.backgroundColor = "#0056b3";
-    });
-    addressButton.addEventListener("mouseleave", function() {
-        this.style.backgroundColor = "#007BFF";
-    });
-
-    const addressText = document.querySelector(".container p");
-    addressText.textContent = "Avenida Maringá, 597, Nova Brasília, CEP: 76.908-402, Ji-Paraná/RO";
-
-    const mapIframe = document.querySelector(".map-responsive iframe");
-    mapIframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4046495969937!2d-61.92722692499231!3d-10.886529089268997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93c99af9b96f5f87%3A0xed07ba757a2ea2c0!2sSomar%20Etiquetas%20e%20Bobinas!5e1!3m2!1spt-BR!2sbr!4v1729782497277!5m2!1spt-BR!2sbr";
-});
+    <!-- Mapa do Google no fim da página -->
+    <div class="container map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4046495969937!2d-61.92722692499231!3d-10.886529089268997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93c99af9b96f5f87%3A0xed07ba757a2ea2c0!2sSomar%20Etiquetas%20e%20Bobinas!5e1!3m2!1spt-BR!2sbr!4v1729782497277!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</body>
+</html>
